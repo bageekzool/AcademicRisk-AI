@@ -1,0 +1,39 @@
+{
+    "project": "AcademicRisk AI",
+    "status": "frozen_candidates_before_test",
+    "data_split": {
+        "training": 3096,
+        "validation": 664,
+        "test": 664
+    },
+    "notes": [
+        "Candidate scores are from Validation.",
+        "Test data has not been used.",
+        "Binary threshold was selected using training out-of-fold predictions.",
+        "Final test scores are not yet available."
+    ],
+    "candidates": {
+        "multiclass_A": {
+            "file": "random_forest_A.joblib",
+            "stage": "A",
+            "type": "multiclass",
+            "selection_metric": "macro_f1",
+            "validation_score": 0.4745
+        },
+        "multiclass_B": {
+            "file": "multiclass_logistic_B_balanced.joblib",
+            "stage": "B",
+            "type": "multiclass",
+            "selection_metric": "macro_f1",
+            "validation_score": 0.6346
+        },
+        "binary_warning_B": {
+            "file": "binary_logistic_B_threshold.joblib",
+            "stage": "B",
+            "type": "binary",
+            "selection_metric": "f2",
+            "validation_score": 0.7561,
+            "threshold": 0.22
+        }
+    }
+}

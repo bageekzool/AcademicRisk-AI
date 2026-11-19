@@ -1,0 +1,84 @@
+
+# ============================================
+# AcademicRisk AI - Git Ignore
+# ============================================
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# ============================================
+# Datasets - Do not publish raw student data
+# ============================================
+
+data/raw/
+data/processed/
+data/splits/
+
+# ============================================
+# Trained models - Explicit allowlist
+# ============================================
+
+models/*
+
+!models/random_forest_A.joblib
+!models/multiclass_logistic_B_balanced.joblib
+!models/binary_logistic_B_threshold.joblib
+!models/binary_B_shap_reference.joblib
+!models/.gitkeep
+
+# ============================================
+# Reports
+# ============================================
+
+reports/figures/*
+reports/tables/*
+
+!reports/figures/.gitkeep
+!reports/tables/.gitkeep
+
+# Local test reports
+reports/m7_*.txt
+
+# ============================================
+# Backups
+# ============================================
+
+app_backup.py
+app_dashboard_backup.py
+*_backup.py
+requirements_backup.txt
+
+# ============================================
+# Temporary CSV files
+# ============================================
+
+batch_test_*.csv
+academicrisk_tahmin_*.csv
+academicrisk_hatalar.csv
+academicrisk_sablon_*.csv
+
+# Temporary files
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
